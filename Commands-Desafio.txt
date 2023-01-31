@@ -1,0 +1,34 @@
+Inicializar Modo FORK
+
+    node server.js 8080
+
+Inicializar Modo CLUSTER
+
+    node server.js 8080 CLUSTER
+
+Inicializar Forever
+
+    forever start server.js 8080
+
+Finalizar Forever
+
+    forever stopall
+
+Inicializar PM2 Fork
+
+    pm2 start server.js --name="Fork" --watch -- PORT   
+
+Inicializar PM2 Cluster
+
+    pm2 start server.js --name="Cluster" --watch -i max -- PORT   
+
+
+Finalizar PM2
+
+    pm2 delete all
+
+Finalizar NGINX
+
+    Se inserta esta linea de comando dentro de la carpeta donde se abrio el NGINX
+
+    nginx.exe -s stop
